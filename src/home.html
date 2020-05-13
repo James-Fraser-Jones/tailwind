@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="../icons/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+    <title>Freelance Web Developer and Tutor: James Fraser-Jones</title>
+
+</head>
+
+<body class="font-newsans text-tpurple">
+    <div class="fixed z-20 absolute-center-h mt-3 box-48"> <!--logo-->
+        <svg version="1.1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="359.0000000000001 59 263.9999999999999 264.0027985110104" width="48px" height="48px">
+            <style>
+                @keyframes light-to-dark-logo {
+                    from {fill: #ffe5d4;}
+                    to {fill: #694f5d;}
+                }
+                .light-to-dark-logo {
+                    animation-name: light-to-dark-logo;
+                    animation-duration: 0.4s;
+                    animation-timing-function: ease-in-out;
+                }
+                @keyframes dark-to-light-logo {
+                    from {fill: #694f5d;}
+                    to {fill: #ffe5d4;}
+                }
+                .dark-to-light-logo {
+                    animation-name: dark-to-light-logo;
+                    animation-duration: 0.4s;
+                    animation-timing-function: ease-in-out;
+                }
+                .dark-logo {
+                    fill: #694f5d;
+                }
+                .light-logo {
+                    fill: #ffe5d4;
+                }
+            </style>
+            <defs>
+                <path d="M470 90C429.99 90.6 404.98 90.98 394.98 91.13C392.22 91.17 390 93.42 390 96.18C390 103.51 390 120.5 390 127.82C390 130.57 392.23 132.8 394.98 132.8C409.98 132.8 450.02 132.8 465.02 132.8C467.77 132.8 470 135.03 470 137.78C470 153.43 470 183.2 470 195.8C470 208.87 465.5 221.54 457.26 231.69C451.09 239.29 444.11 244.46 436.31 247.2C426.43 250.68 412.63 250.95 394.91 248.02C392.34 247.59 390 249.57 390 252.18C390 259.51 390 276.5 390 283.82C390 286.64 392.16 288.97 394.96 289.2C410.63 290.45 424.41 289.52 436.31 286.43C449.65 282.96 460.87 276.59 470 267.3C470 276.11 470 281.62 470 283.82C470 286.57 472.23 288.8 474.98 288.8C481.98 288.8 498.02 288.8 505.02 288.8C507.77 288.8 510 286.57 510 283.82C510 270.26 510 234.55 510 220.98C510 218.23 512.23 216 514.98 216C529.98 216 570.02 216 585.02 216C587.77 216 590 213.77 590 211.02C590 203.7 590 186.71 590 179.38C590 176.63 587.77 174.4 585.02 174.4C570.02 174.4 529.98 174.4 514.98 174.4C512.23 174.4 510 172.17 510 169.42C510 162.1 510 145.11 510 137.78C510 135.03 512.23 132.8 514.98 132.8C529.98 132.8 570.02 132.8 585.02 132.8C587.77 132.8 590 130.57 590 127.82C590 120.5 590 103.51 590 96.18C590 93.42 587.78 91.18 585.02 91.15C569.68 91 531.34 90.61 470 90L470 60C547.34 60 595.68 60 615.02 60C617.77 60 620 62.23 620 64.98C620 115.99 620 264.02 620 315.02C620 317.77 617.77 320 615.02 320C564.02 320 415.98 320 364.98 320C362.23 320 360 317.77 360 315.02C360 264.02 360 115.99 360 64.98C360 62.23 362.23 60 364.98 60C378.98 60 413.99 60 470 60L470 90Z" id="c1HQkOgYbG"></path>
+            </defs>
+            <g>
+                <use xlink:href="#c1HQkOgYbG" opacity="1" class="dark-logo" id="logo"></use>
+            </g>
+        </svg>
+    </div>
+    <div class="fixed z-20 top-0 right-0 mr-3 mt-3 w-10 h-10 text-3xl text-tpurple" id="sidebar-button"> <!--burger-->
+        <div class="absolute-center fas fa-bars opacity-100" id="sidebar-bars-icon"></div>
+        <div class="absolute-center fas fa-times opacity-0" id="sidebar-times-icon"></div>
+    </div>
+    <div class="fixed z-10 full-screen bg-tdarkgreen left-100" id="sidebar"> <!--sidebar-->
+            
+    </div>
+    <div class="absolute z-0 full-screen overflow-auto" id="page-window"> <!--page-window-->
+        <div class="full-screen bg-tbeige overflow-auto"> <!--section-1 (overflow property required due to "collapsing margins" issue)-->
+            <p class="mt-16 p-5 text-4xl">Hello! I'm James.<br/><br/>I build beautiful websites.</p>
+        </div>
+        <div class="full-screen bg-tpink"> <!--section-2-->
+            
+        </div>
+        <div class="full-screen bg-tgreen"> <!--section-3-->
+            
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>
+
+<!--
+    Sections: 
+        -About me
+            -Interests
+                -Design
+                -Software
+                -Mathematics
+            -Work Experience
+                -Fullstack Development
+                -Maths Tutoring
+        -Portfolio
+            -LiveInk
+            -More (coming soon!)
+        -Working Process (& testimonials)
+        -Blog
+
+-->

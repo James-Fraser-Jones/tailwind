@@ -1,0 +1,117 @@
+/* COLOUR PALETTE:
+https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+*/
+
+@tailwind base;
+
+/* .flower-backdrop {
+    background-image: url(images/flower_640.jpg);
+    @apply bg-center;
+    @apply bg-fixed; 
+    @apply bg-secondary;
+    background-blend-mode: luminosity;
+}
+
+.default-text {
+    @apply font-newsans; 
+    @apply text-white;
+} */
+
+.full-screen {
+    @apply w-screen;
+    @apply h-screen;
+}
+
+.absolute-center {
+    @apply block;
+    @apply absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absolute-center-h {
+    @apply block;
+    @apply absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-48 {
+    width: 48px;
+    height: 48px;
+}
+
+.slide-in-left {
+    animation-name: slide-in-left;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes slide-in-left {
+    from {left: 100%;}
+    to {left: 0;}
+}
+
+.slide-out-right {
+    animation-name: slide-out-right;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes slide-out-right {
+    from {left: 0;}
+    to {left: 100%;}
+}
+
+@keyframes opacity-off {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+.opacity-off {
+    animation-name: opacity-off;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes opacity-on {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.opacity-on {
+    animation-name: opacity-on;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes light-to-dark {
+    from {color: #ffe5d4; transform: rotate(360deg);}
+    to {color: #694f5d; transform: rotate(0deg);}
+}
+.light-to-dark {
+    animation-name: light-to-dark;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes dark-to-light {
+    from {color: #694f5d; transform: rotate(0deg);}
+    to {color: #ffe5d4; transform: rotate(360deg);}
+}
+.dark-to-light {
+    animation-name: dark-to-light;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+    font-family: NexaBold;
+    src: url(fonts/NexaBold.woff);
+}
+
+@font-face {
+    font-family: CircularStd;
+    src: url(fonts/CircularStd-Medium.woff);
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 45 45" width="45" height="45">
+    <defs>
+        <path d="M42.61 10C43.93 10 45 8.93 45 7.61C45 6.09 45 3.91 45 2.39C45 1.07 43.93 0 42.61 0C34.09 0 10.91 0 2.39 0C1.07 0 0 1.07 0 2.39C0 3.91 0 6.09 0 7.61C0 8.93 1.07 10 2.39 10C10.91 10 34.09 10 42.61 10Z" id="d1ucpHS63D"></path>
+        <path d="M42.61 45C43.93 45 45 43.93 45 42.61C45 41.09 45 38.91 45 37.39C45 36.07 43.93 35 42.61 35C34.09 35 10.91 35 2.39 35C1.07 35 0 36.07 0 37.39C0 38.91 0 41.09 0 42.61C0 43.93 1.07 45 2.39 45C10.91 45 34.09 45 42.61 45Z" id="c3KNXcv3AD"></path>
+        <path d="M42.61 27.5C43.93 27.5 45 26.43 45 25.11C45 23.59 45 21.41 45 19.89C45 18.57 43.93 17.5 42.61 17.5C34.09 17.5 10.91 17.5 2.39 17.5C1.07 17.5 0 18.57 0 19.89C0 21.41 0 23.59 0 25.11C0 26.43 1.07 27.5 2.39 27.5C10.91 27.5 34.09 27.5 42.61 27.5Z" id="eh8FwjvRX"></path>
+    </defs>
+    <g id="menu" opacity="1" fill="white" fill-opacity="1">
+        <use xlink:href="#d1ucpHS63D"></use>
+        <use xlink:href="#c3KNXcv3AD"></use>
+        <use xlink:href="#eh8FwjvRX"></use>
+    </g>
+</svg>
