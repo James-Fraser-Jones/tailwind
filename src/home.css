@@ -4,18 +4,9 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
 @tailwind base;
 
-/* .flower-backdrop {
-    background-image: url(images/flower_640.jpg);
-    @apply bg-center;
-    @apply bg-fixed; 
-    @apply bg-secondary;
-    background-blend-mode: luminosity;
+.transition-font-size {
+    transition-property: font-size;
 }
-
-.default-text {
-    @apply font-newsans; 
-    @apply text-white;
-} */
 
 .full-screen {
     @apply w-screen;
@@ -35,11 +26,6 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
     @apply absolute;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.box-48 {
-    width: 48px;
-    height: 48px;
 }
 
 .slide-in-left {
@@ -83,8 +69,8 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 }
 
 @keyframes light-to-dark {
-    from {color: #ffe5d4; transform: rotate(360deg);}
-    to {color: #694f5d; transform: rotate(0deg);}
+    from {color: #ffe5d4; fill: #ffe5d4;}
+    to {color: #694f5d; fill: #694f5d;}
 }
 .light-to-dark {
     animation-name: light-to-dark;
@@ -93,11 +79,31 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 }
 
 @keyframes dark-to-light {
-    from {color: #694f5d; transform: rotate(0deg);}
-    to {color: #ffe5d4; transform: rotate(360deg);}
+    from {color: #694f5d; fill: #694f5d;}
+    to {color: #ffe5d4; fill: #ffe5d4;}
 }
 .dark-to-light {
     animation-name: dark-to-light;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes spin-clockwise {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.spin-clockwise {
+    animation-name: spin-clockwise;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes spin-anticlockwise {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+.spin-anticlockwise {
+    animation-name: spin-anticlockwise;
     animation-duration: 0.4s;
     animation-timing-function: ease-in-out;
 }

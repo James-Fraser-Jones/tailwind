@@ -599,18 +599,9 @@ video {
   height: auto;
 }
 
-/* .flower-backdrop {
-    background-image: url(images/flower_640.jpg);
-    @apply bg-center;
-    @apply bg-fixed; 
-    @apply bg-secondary;
-    background-blend-mode: luminosity;
+.transition-font-size {
+  transition-property: font-size;
 }
-
-.default-text {
-    @apply font-newsans; 
-    @apply text-white;
-} */
 
 .full-screen {
   width: 100vw;
@@ -630,11 +621,6 @@ video {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.box-48 {
-  width: 48px;
-  height: 48px;
 }
 
 .slide-in-left {
@@ -755,21 +741,21 @@ video {
 
 @-webkit-keyframes light-to-dark {
   from {
-    color: #ffe5d4; transform: rotate(360deg);
+    color: #ffe5d4; fill: #ffe5d4;
   }
 
   to {
-    color: #694f5d; transform: rotate(0deg);
+    color: #694f5d; fill: #694f5d;
   }
 }
 
 @keyframes light-to-dark {
   from {
-    color: #ffe5d4; transform: rotate(360deg);
+    color: #ffe5d4; fill: #ffe5d4;
   }
 
   to {
-    color: #694f5d; transform: rotate(0deg);
+    color: #694f5d; fill: #694f5d;
   }
 }
 
@@ -784,27 +770,85 @@ video {
 
 @-webkit-keyframes dark-to-light {
   from {
-    color: #694f5d; transform: rotate(0deg);
+    color: #694f5d; fill: #694f5d;
   }
 
   to {
-    color: #ffe5d4; transform: rotate(360deg);
+    color: #ffe5d4; fill: #ffe5d4;
   }
 }
 
 @keyframes dark-to-light {
   from {
-    color: #694f5d; transform: rotate(0deg);
+    color: #694f5d; fill: #694f5d;
   }
 
   to {
-    color: #ffe5d4; transform: rotate(360deg);
+    color: #ffe5d4; fill: #ffe5d4;
   }
 }
 
 .dark-to-light {
   -webkit-animation-name: dark-to-light;
           animation-name: dark-to-light;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-clockwise {
+  -webkit-animation-name: spin-clockwise;
+          animation-name: spin-clockwise;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes spin-anticlockwise {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin-anticlockwise {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.spin-anticlockwise {
+  -webkit-animation-name: spin-anticlockwise;
+          animation-name: spin-anticlockwise;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
   -webkit-animation-timing-function: ease-in-out;
@@ -6728,6 +6772,46 @@ video {
 }
 
 .text-6xl {
+  font-size: 4rem;
+}
+
+.hover\:text-xs:hover {
+  font-size: 0.75rem;
+}
+
+.hover\:text-sm:hover {
+  font-size: 0.875rem;
+}
+
+.hover\:text-base:hover {
+  font-size: 1rem;
+}
+
+.hover\:text-lg:hover {
+  font-size: 1.125rem;
+}
+
+.hover\:text-xl:hover {
+  font-size: 1.25rem;
+}
+
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+}
+
+.hover\:text-3xl:hover {
+  font-size: 1.875rem;
+}
+
+.hover\:text-4xl:hover {
+  font-size: 2.25rem;
+}
+
+.hover\:text-5xl:hover {
+  font-size: 3rem;
+}
+
+.hover\:text-6xl:hover {
   font-size: 4rem;
 }
 
@@ -25800,6 +25884,46 @@ video {
     font-size: 4rem;
   }
 
+  .sm\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .sm\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .sm\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .sm\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .sm\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .sm\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .sm\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .sm\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .sm\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .sm\:hover\:text-6xl:hover {
+    font-size: 4rem;
+  }
+
   .sm\:leading-3 {
     line-height: .75rem;
   }
@@ -44855,6 +44979,46 @@ video {
   }
 
   .md\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .md\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .md\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .md\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .md\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .md\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .md\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .md\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .md\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .md\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .md\:hover\:text-6xl:hover {
     font-size: 4rem;
   }
 
@@ -63916,6 +64080,46 @@ video {
     font-size: 4rem;
   }
 
+  .lg\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .lg\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .lg\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .lg\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .lg\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .lg\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .lg\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .lg\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .lg\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .lg\:hover\:text-6xl:hover {
+    font-size: 4rem;
+  }
+
   .lg\:leading-3 {
     line-height: .75rem;
   }
@@ -82971,6 +83175,46 @@ video {
   }
 
   .xl\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .xl\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .xl\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .xl\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .xl\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .xl\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .xl\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .xl\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .xl\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .xl\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .xl\:hover\:text-6xl:hover {
     font-size: 4rem;
   }
 
