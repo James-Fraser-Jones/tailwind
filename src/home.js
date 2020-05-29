@@ -9,11 +9,11 @@ function toggleSidebar(){
     let sidebarOpen = sidebar.classList.contains("left-0");
 
     sidebar.classList.add(words("slide-in-left",sidebarOpen));
-    sidebarButton.classList.add(words("dark-to-light",sidebarOpen));
-    sidebarButton.classList.add(words("spin-clockwise",sidebarOpen));
+    sidebarButton.classList.add(words("dark-to-light-spin",sidebarOpen));
     sidebarBarsIcon.classList.add(words("opacity-off",sidebarOpen));
     sidebarTimesIcon.classList.add(words("opacity-on",sidebarOpen));
     logo.classList.add(words("dark-to-light",sidebarOpen));
+    
     setTimeout(() => {
         sidebar.classList.replace(words("left-100",sidebarOpen), words("left-0",sidebarOpen));
         sidebarButton.classList.replace(words("text-tpurple",sidebarOpen),words("text-tbeige",sidebarOpen));
@@ -22,8 +22,7 @@ function toggleSidebar(){
         logo.classList.replace(words("text-tpurple",sidebarOpen), words("text-tbeige",sidebarOpen));
 
         sidebar.classList.remove(words("slide-in-left",sidebarOpen));
-        sidebarButton.classList.remove(words("dark-to-light",sidebarOpen));
-        sidebarButton.classList.remove(words("spin-clockwise",sidebarOpen));
+        sidebarButton.classList.remove(words("dark-to-light-spin",sidebarOpen));
         sidebarBarsIcon.classList.remove(words("opacity-off",sidebarOpen));
         sidebarTimesIcon.classList.remove(words("opacity-on",sidebarOpen));
         logo.classList.remove(words("dark-to-light",sidebarOpen));
@@ -34,7 +33,7 @@ function words(str, opposite){
     if (!opposite){return str;}
     let opposites = [ "slide-in-left", "slide-out-right"
                     , "dark-to-light", "light-to-dark"
-                    , "spin-clockwise", "spin-anticlockwise"
+                    , "dark-to-light-spin", "light-to-dark-spin"
                     , "opacity-off", "opacity-on"
                     , "opacity-100", "opacity-0"
                     , "left-100", "left-0"

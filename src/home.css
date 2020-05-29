@@ -28,24 +28,20 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
     transform: translateX(-50%);
 }
 
-.slide-in-left {
-    animation-name: slide-in-left;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
-}
 @keyframes slide-in-left {
     from {left: 100%;}
     to {left: 0;}
 }
-
-.slide-out-right {
-    animation-name: slide-out-right;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+.slide-in-left {
+    animation: slide-in-left 0.4s ease-in-out
 }
+
 @keyframes slide-out-right {
     from {left: 0;}
     to {left: 100%;}
+}
+.slide-out-right {
+    animation: slide-out-right 0.4s ease-in-out
 }
 
 @keyframes opacity-off {
@@ -53,9 +49,7 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
     to {opacity: 0;}
 }
 .opacity-off {
-    animation-name: opacity-off;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+    animation: opacity-off 0.4s ease-in-out
 }
 
 @keyframes opacity-on {
@@ -63,49 +57,43 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
     to {opacity: 1;}
 }
 .opacity-on {
-    animation-name: opacity-on;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+    animation: opacity-on 0.4s ease-in-out
 }
 
 @keyframes light-to-dark {
-    from {color: #ffe5d4; fill: #ffe5d4;}
-    to {color: #694f5d; fill: #694f5d;}
+    from {color: #ffe5d4;}
+    to {color: #694f5d;}
 }
 .light-to-dark {
-    animation-name: light-to-dark;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+    animation: light-to-dark 0.4s ease-in-out
 }
 
 @keyframes dark-to-light {
-    from {color: #694f5d; fill: #694f5d;}
-    to {color: #ffe5d4; fill: #ffe5d4;}
+    from {color: #694f5d;}
+    to {color: #ffe5d4;}
 }
 .dark-to-light {
-    animation-name: dark-to-light;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+    animation: dark-to-light 0.4s ease-in-out
 }
 
+/*
+Multiple keyframe animations can be triggered with a single animation property.
+However attempting to apply multiple animation properties through applying multiple classes will not work.
+*/
 @keyframes spin-clockwise {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
 }
-.spin-clockwise {
-    animation-name: spin-clockwise;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+.dark-to-light-spin {
+    animation: spin-clockwise 0.4s ease-in-out, dark-to-light 0.4s ease-in-out
 }
 
 @keyframes spin-anticlockwise {
     from {transform: rotate(360deg);}
     to {transform: rotate(0deg);}
 }
-.spin-anticlockwise {
-    animation-name: spin-anticlockwise;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+.light-to-dark-spin {
+    animation: spin-anticlockwise 0.4s ease-in-out, light-to-dark 0.4s ease-in-out
 }
 
 @tailwind components;
